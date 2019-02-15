@@ -25,3 +25,11 @@ export function generateContent(content, mainDiv) {
   // Append content div into main div
   mainDiv.appendChild(contentDiv);
 }
+
+export function changeTabAppearance(tab) {
+  let previousTab = document.getElementsByClassName("active")[0];
+  if (previousTab !== undefined) {
+    previousTab.removeAttribute("class", "active");
+  }
+  tab.setAttribute("class", "tabLi active");
+}

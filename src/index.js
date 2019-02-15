@@ -8,11 +8,13 @@ import {
 } from "./contents";
 
 import {
-  generateHome
+  generateHome,
+  homeTabListener
 } from "./home";
 
 import {
-  generateAbout
+  generateAbout,
+  aboutTabListener
 } from "./about";
 
 // Refactor so not so much global variables
@@ -27,6 +29,8 @@ function generateInitialContent(contentDiv, tabs) {
   generateContent(homePageContent, contentDiv);
   generateHome();
   generateAbout();
+  homeTabListener();
+  aboutTabListener();
 }
 
 function generateMainHeader() {

@@ -1,6 +1,28 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainHeader {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#tabNav {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
 .tabLi {
   display: inline;
   padding: 10px;
   border: 1px solid #000;
   cursor: pointer;
+}
+
+.active {
+  border-bottom: 2px solid #225599;
+  background-color: #225599;
 }

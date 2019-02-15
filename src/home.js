@@ -1,5 +1,6 @@
 import {
-  generateContent
+  generateContent,
+  changeTabAppearance
 } from "./helpers"
 
 import {
@@ -9,4 +10,9 @@ import {
 // Event listener attach to home tab
 export function generateHome() {
   document.getElementById("home-tab").addEventListener("click", () => generateContent(homePageContent, document.getElementById("content")));
+}
+
+export function homeTabListener() {
+  let tab = document.getElementById("home-tab")
+  tab.addEventListener("click", () => changeTabAppearance(tab));
 }
