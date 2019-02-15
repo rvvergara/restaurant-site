@@ -1,17 +1,8 @@
 import {
-  addHomeListener,
-  homeTabListener
-} from "./home";
-
-import {
-  aboutTabListener,
-  addAboutListener
-} from "./about";
-
-import {
-  addContactListener,
-  contactTabListener
-} from "./contact";
+  homePageContent,
+  aboutPageContent,
+  contactPageContent
+} from "./contents";
 
 export function generateContent(content, mainDiv) {
   // For every tab content have a main content div
@@ -56,8 +47,7 @@ export function generateInitialContent(contentDiv, tabs, homeContent) {
   // Home tab should appear active
   changeTabAppearance(document.getElementById("home-tab"));
   // Add event listeners to all content divs and tabs
-  addListenersToDivs();
-  addListenersToTabs();
+  addListenersToDivsAndTabs();
 }
 
 export function generateMainHeader() {
@@ -87,14 +77,18 @@ export function generateTab(ul, tabName) {
   ul.appendChild(li);
 }
 
-function addListenersToTabs() {
-  homeTabListener();
-  aboutTabListener();
-  contactTabListener();
+
+function addListenersToDivsAndTabs() {
+  addContentListener("home-tab", homePageContent);
+  addContentListener("about-tab", aboutPageContent);
+  addContentListener("contact-tab", contactPageContent);
 }
 
-function addListenersToDivs() {
-  addHomeListener();
-  addAboutListener();
-  addContactListener();
+// Event listener attach
+export function addContentListener(id, content) {
+  let tab = document.getElementById(id);
+  tab.addEventListener("click", () => {
+    generateContent(content, document.getElementById("content"));
+    changeTabAppearance(tab);
+  });
 }
