@@ -1,8 +1,14 @@
 import {
-  homePageContent,
-  aboutPageContent,
+  homePageContent
+} from "./home";
+
+import {
+  aboutPageContent
+} from "./about";
+
+import {
   contactPageContent
-} from "./contents";
+} from "./contact";
 
 export function generateContent(content, mainDiv) {
   // Before appending remove any existing div inside main div (previous content)

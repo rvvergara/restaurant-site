@@ -4,6 +4,6 @@ import {
 
 import {
   homePageContent,
-} from "./contents";
+} from "./home";
 
 window.addEventListener("load", () => generateInitialContent(document.getElementById("content"), ["Home", "About", "Contact"], homePageContent));
