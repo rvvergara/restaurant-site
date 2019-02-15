@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "by [Ryan](https://github.com/rvvergara) and [Dipto](https://github.com/dipto0321)",
   "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rvvergara/restaurant-site.git"

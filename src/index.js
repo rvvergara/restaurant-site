@@ -1,13 +1,21 @@
 // Refactor so not so much global variables
+import {
+  generateHomeContent
+} from "./home";
+import {
+  homePageContent
+} from "./contents";
 
 let mainContentDiv = document.getElementById("content");
-let tabNames = ["Home", "Content", "Contact"];
+let tabNames = ["Home", "About", "Contact"];
 window.addEventListener("load", () => generateInitialContent(mainContentDiv, tabNames));
 // End of what needs to be refactored
 
 function generateInitialContent(contentDiv, tabs) {
   contentDiv.appendChild(generateMainHeader());
-  contentDiv.appendChild(generateNav(tabs))
+  contentDiv.appendChild(generateNav(tabs));
+  generateHomeContent(homePageContent, contentDiv);
+
 }
 
 function generateMainHeader() {
