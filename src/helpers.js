@@ -5,30 +5,12 @@ import {
 } from "./contents";
 
 export function generateContent(content, mainDiv) {
-  // For every tab content have a main content div
-  let contentDiv = document.createElement("div");
-  contentDiv.setAttribute("id", "tabContentDiv");
-  // Each tab content should have a heading
-  let heading = document.createElement("h3");
-  heading.setAttribute("class", "heading");
-  heading.innerText = content.heading;
-  // Each tab content should have a main text
-  let contentBody = document.createElement("div");
-  contentBody.setAttribute("class", "content");
-  contentBody.innerHTML = content.body;
-  // Each tab content should have an image
-  let image = document.createElement("img");
-  image.setAttribute("class", "content-img");
-  image.setAttribute("src", content.image);
   // Before appending remove any existing div inside main div (previous content)
   let previousContent = document.getElementById("tabContentDiv");
+  let currentContent = createContent(content)
   if (previousContent !== null) mainDiv.removeChild(previousContent);
   // Append all elements into content's div
-  contentDiv.appendChild(heading);
-  contentDiv.appendChild(image);
-  contentDiv.appendChild(contentBody);
-  // Append content div into main div
-  mainDiv.appendChild(contentDiv);
+  appendCurrentContent(currentContent, mainDiv);
 }
 
 export function changeTabAppearance(tab) {
@@ -67,6 +49,7 @@ export function generateNav(tabArr) {
   return ul;
 }
 
+// Function to generate top nav during page load
 export function generateTab(ul, tabName) {
   // create li element
   let li = document.createElement("li");
@@ -77,18 +60,56 @@ export function generateTab(ul, tabName) {
   ul.appendChild(li);
 }
 
-
-function addListenersToDivsAndTabs() {
-  addContentListener("home-tab", homePageContent);
-  addContentListener("about-tab", aboutPageContent);
-  addContentListener("contact-tab", contactPageContent);
-}
-
-// Event listener attach
+// Calling the function to add listeners
 export function addContentListener(id, content) {
   let tab = document.getElementById(id);
   tab.addEventListener("click", () => {
     generateContent(content, document.getElementById("content"));
     changeTabAppearance(tab);
   });
+}
+
+// function to add click event listeners to all content divs and tabs
+function addListenersToDivsAndTabs() {
+  addContentListener("home-tab", homePageContent);
+  addContentListener("about-tab", aboutPageContent);
+  addContentListener("contact-tab", contactPageContent);
+}
+
+// Creating content for each div that appears during load or tab click
+function createContent(content) {
+  // For every tab content have a main content div
+  let contentDiv = document.createElement("div");
+  contentDiv.setAttribute("id", "tabContentDiv");
+  // Each tab content should have a heading
+  let heading = document.createElement("h3");
+  heading.setAttribute("class", "heading");
+  heading.innerText = content.heading;
+  // Each tab content should have a main text
+  let contentBody = document.createElement("div");
+  contentBody.setAttribute("class", "content");
+  contentBody.innerHTML = content.body;
+  // Each tab content should have an image
+  let image = document.createElement("img");
+  image.setAttribute("class", "content-img");
+  image.setAttribute("src", content.image);
+  return {
+    contentDiv,
+    heading,
+    contentBody,
+    image
+  }
+}
+
+// Appending contents function
+function appendCurrentContent(currentContent, mainDiv) {
+  currentContent.contentDiv.appendChild(currentContent.heading);
+  currentContent.contentDiv.appendChild(currentContent.image);
+  currentContent.contentDiv.appendChild(currentContent.contentBody);
+  // Append content div into main div
+  mainDiv.appendChild(currentContent.contentDiv);
+}
+
+function appendContentToMainDiv() {
+
 }
