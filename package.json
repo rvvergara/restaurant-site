@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-site",
+  "version": "1.0.0",
+  "description": "by [Ryan](https://github.com/rvvergara) and [Dipto](https://github.com/dipto0321)",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvvergara/restaurant-site.git"
+  },
+  "author": "Ryan and Dipto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvvergara/restaurant-site/issues"
+  },
+  "homepage": "https://github.com/rvvergara/restaurant-site#readme",
+  "devDependencies": {
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  }
+}
