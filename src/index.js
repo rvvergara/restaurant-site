@@ -1,11 +1,21 @@
-// Refactor so not so much global variables
 import {
-  generateHomeContent
-} from "./home";
+  generateContent
+} from "./helpers";
+
 import {
-  homePageContent
+  homePageContent,
+  aboutPageContent
 } from "./contents";
 
+import {
+  generateHome
+} from "./home";
+
+import {
+  generateAbout
+} from "./about";
+
+// Refactor so not so much global variables
 let mainContentDiv = document.getElementById("content");
 let tabNames = ["Home", "About", "Contact"];
 window.addEventListener("load", () => generateInitialContent(mainContentDiv, tabNames));
@@ -14,8 +24,9 @@ window.addEventListener("load", () => generateInitialContent(mainContentDiv, tab
 function generateInitialContent(contentDiv, tabs) {
   contentDiv.appendChild(generateMainHeader());
   contentDiv.appendChild(generateNav(tabs));
-  generateHomeContent(homePageContent, contentDiv);
-
+  generateContent(homePageContent, contentDiv);
+  generateHome();
+  generateAbout();
 }
 
 function generateMainHeader() {
@@ -39,6 +50,7 @@ function generateTab(ul, tabName) {
   // create li element
   let li = document.createElement("li");
   li.setAttribute("class", "tabLi");
+  li.setAttribute("id", `${tabName.toLowerCase()}-tab`);
   li.innerText = tabName;
   // append li element into a ul
   ul.appendChild(li);
