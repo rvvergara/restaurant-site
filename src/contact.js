@@ -8,7 +8,7 @@ import {
 } from "./contents"
 
 // Event listener attach to home tab
-export function generateContact() {
+export function addContactListener() {
   document.getElementById("contact-tab").addEventListener("click", () => generateContent(contactPageContent, document.getElementById("content")));
 }
 

@@ -8,7 +8,7 @@ import {
 } from "./contents"
 
 // Event listener attach to home tab
-export function generateAbout() {
+export function addAboutListener() {
   document.getElementById("about-tab").addEventListener("click", () => generateContent(aboutPageContent, document.getElementById("content")));
 }
 
