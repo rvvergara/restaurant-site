@@ -29,7 +29,7 @@ export function generateContent(content, mainDiv) {
 export function changeTabAppearance(tab) {
   let previousTab = document.getElementsByClassName("active")[0];
   if (previousTab !== undefined) {
-    previousTab.removeAttribute("class", "active");
+    previousTab.setAttribute("class", "tabLi");
   }
   tab.setAttribute("class", "tabLi active");
 }
