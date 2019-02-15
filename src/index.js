@@ -17,6 +17,11 @@ import {
   aboutTabListener
 } from "./about";
 
+import {
+  generateContact,
+  contactTabListener
+} from "./contact";
+
 // Refactor so not so much global variables
 let mainContentDiv = document.getElementById("content");
 let tabNames = ["Home", "About", "Contact"];
@@ -31,6 +36,8 @@ function generateInitialContent(contentDiv, tabs) {
   generateAbout();
   homeTabListener();
   aboutTabListener();
+  generateContact();
+  contactTabListener();
 }
 
 function generateMainHeader() {

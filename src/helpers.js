@@ -8,9 +8,9 @@ export function generateContent(content, mainDiv) {
   heading.setAttribute("class", "heading");
   heading.innerText = content.heading;
   // Each tab content should have a main text
-  let text = document.createElement("p");
-  text.setAttribute("class", "content");
-  text.innerText = content.text;
+  let contentBody = document.createElement("div");
+  contentBody.setAttribute("class", "content");
+  contentBody.innerHTML = content.body;
   // Each tab content should have an image
   let image = document.createElement("img");
   image.setAttribute("class", "content-img");
@@ -21,7 +21,7 @@ export function generateContent(content, mainDiv) {
   // Append all elements into content's div
   contentDiv.appendChild(heading);
   contentDiv.appendChild(image);
-  contentDiv.appendChild(text);
+  contentDiv.appendChild(contentBody);
   // Append content div into main div
   mainDiv.appendChild(contentDiv);
 }
