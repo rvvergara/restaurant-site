@@ -33,7 +33,7 @@ export const restaurantPage = (() => {
     generateMainHeader() {
       let header = document.createElement("h1");
       header.setAttribute("id", "mainHeader");
-      header.innerText = "Restaurant Project";
+      header.innerText = "Ryto's Authentic Cuisine";
       return header;
     },
 
