@@ -79,10 +79,7 @@ export const restaurantPage = (() => {
       // For every tab content have a main content div
       let contentDiv = document.createElement("div");
       contentDiv.setAttribute("id", "tabContentDiv");
-      // Each tab content should have a heading
-      let heading = document.createElement("h3");
-      heading.setAttribute("class", "heading");
-      heading.innerText = content.heading;
+
       // Each tab content should have a main text
       let contentBody = document.createElement("div");
       contentBody.setAttribute("class", "content");
@@ -93,15 +90,13 @@ export const restaurantPage = (() => {
       image.setAttribute("src", content.image);
       return {
         contentDiv,
-        heading,
         contentBody,
         image
-      }
+      };
     },
 
     // Appending contents function
     appendCurrentContent(currentContent, mainDiv) {
-      currentContent.contentDiv.appendChild(currentContent.heading);
       currentContent.contentDiv.appendChild(currentContent.image);
       currentContent.contentDiv.appendChild(currentContent.contentBody);
       // Append content div into main div
