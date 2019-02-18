@@ -11,5 +11,5 @@ export const contactPageContent = {
     <input type = "submit" value = "Submit" >
     </form>
   `,
-  image: "https://bit.ly/2Gq50eV"
+  image: "map.png"
 };

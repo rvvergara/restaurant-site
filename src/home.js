@@ -1,5 +1,5 @@
 export const homePageContent = {
   heading: "Home Page",
   body: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis vel eros donec ac odio tempor orci dapibus ultrices. Convallis tellus id interdum velit laoreet. Vulputate mi sit amet mauris. Habitant morbi tristique senectus et. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Rutrum quisque non tellus orci ac auctor. Eros donec ac odio tempor. Aliquam ultrices sagittis orci a scelerisque purus semper eget duis. Fringilla ut morbi tincidunt augue. Leo duis ut diam quam. Pharetra et ultrices neque ornare. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Morbi blandit cursus risus at ultrices mi tempus imperdiet.</p>`,
-  image: "https://cdn.pixabay.com/photo/2014/09/13/21/30/dinner-table-444434_960_720.jpg"
+  image: "home.jpg"
 };

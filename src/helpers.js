@@ -87,7 +87,7 @@ export const restaurantPage = (() => {
       // Each tab content should have an image
       let image = document.createElement("img");
       image.setAttribute("class", "content-img");
-      image.setAttribute("src", content.image);
+      image.setAttribute("src", `./images/${content.image}`);
       return {
         contentDiv,
         contentBody,

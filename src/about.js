@@ -4,5 +4,5 @@ export const aboutPageContent = {
   <p> Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget.In nisl nisi scelerisque eu.Auctor neque vitae tempus quam.Amet consectetur adipiscing elit ut.Nulla facilisi etiam dignissim diam.Nulla pharetra diam sit amet nisl suscipit.Pellentesque habitant morbi tristique senectus et netus et.Eleifend quam adipiscing vitae proin.Pharetra pharetra massa massa ultricies mi quis hendrerit.Et tortor consequat id porta nibh venenatis cras.Pellentesque elit eget gravida cum sociis natoque.A lacus vestibulum sed arcu non odio.Varius sit amet mattis vulputate enim nulla aliquet porttitor lacus.Risus in hendrerit gravida rutrum.Tincidunt augue interdum velit euismod in pellentesque massa placerat duis. </p>
 `,
 
-  image: "https://cdn.pixabay.com/photo/2015/03/26/09/39/fried-chicken-690039_960_720.jpg"
+  image: "about.jpg"
 };
