@@ -21,11 +21,14 @@ body {
   padding: 10px;
   border: 1px solid #000;
   cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 20%)
 }
 
 .active {
-  border-bottom: 2px solid #225599;
-  background-color: #225599;
+  border-bottom: 2px solid #c0392b;
+  background-color: #c0392b;
+  color: #fff;
 }
 
 .container {
@@ -48,4 +51,10 @@ body {
 /* Style for whole content div */
 #tabContentDiv {
   display: flex;
+  margin-top: 4rem;
+}
+
+.content-img {
+  width: 60%;
+  margin-right: 10px;
 }
